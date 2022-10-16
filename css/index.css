@@ -13,7 +13,6 @@ body {
 }
 
 .main-div {
-  /* position: relative; */
   width: 90%;
   margin: 0 auto;
 }
@@ -28,6 +27,7 @@ nav {
 
 nav img {
   width: 100px;
+  cursor: pointer;
 }
 
 .nav-items {
@@ -101,4 +101,52 @@ nav .signin-btn {
   position: absolute;
   left: 46%;
   top: 400px;
+}
+
+/* mobile responsive */
+
+@media (max-width: 992px) {
+  /* left section */
+  .intro-section .left-section {
+    position: absolute;
+    top: 80px;
+  }
+  .intro-section .left-section h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+  /* right section */
+  .imgs-div .intro-img {
+    width: 500px;
+    position: absolute;
+    left: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* navbar hiding */
+  .nav-items {
+    display: none;
+  }
+  /* right section image hiding */
+  .imgs-div .intro-img,
+  .vector-img,
+  .vector-dot {
+    display: none;
+  }
+  /* left section-> center */
+  .intro-section .left-section {
+    top: 50px;
+    left: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    overflow-x: hidden;
+  }
+  /* left section-> center */
+  .intro-section .left-section {
+    left: 50px;
+  }
 }
